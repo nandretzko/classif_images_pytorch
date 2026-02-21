@@ -1,0 +1,74 @@
+[project]
+name = "image-classifier"
+version = "0.1.0"
+description = "Image classification using MobileNetV2 Transfer Learning (PyTorch / torchvision)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
+keywords = ["deep-learning", "image-classification", "mobilenetv2", "transfer-learning", "pytorch"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "scikit-learn>=1.2.0",
+    "seaborn>=0.12.0",
+    "matplotlib>=3.6.0",
+    "numpy>=1.23.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "isort>=5.12.0",
+    "pytest>=7.0.0",
+]
+# GPU CUDA 11.8 — uncomment and run:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+cuda = []
+
+[project.scripts]
+train = "train_classifier:main"
+
+[project.urls]
+Homepage = "https://github.com/your-user/image-classifier"
+Repository = "https://github.com/your-user/image-classifier"
+Issues = "https://github.com/your-user/image-classifier/issues"
+
+# ── Build system ──────────────────────────────────────────
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+# ── Black (formatter) ─────────────────────────────────────
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+skip-string-normalization = false
+
+# ── isort (import sorter) ─────────────────────────────────
+[tool.isort]
+profile = "black"
+line_length = 100
+
+# ── Pytest ────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]

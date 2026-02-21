@@ -1,0 +1,95 @@
+# ─────────────────────────────────────────────
+#  DATASET & MODÈLES (trop lourds pour Git)
+# ─────────────────────────────────────────────
+dataset/
+!dataset/.gitkeep
+
+# Modèles PyTorch
+*.pth
+*.pt
+*.onnx
+
+# Si tu veux versionner les modèles, utilise Git LFS :
+# git lfs track "*.pth"
+
+# ─────────────────────────────────────────────
+#  OUTPUTS GÉNÉRÉS
+# ─────────────────────────────────────────────
+*.png
+*.jpg
+*.jpeg
+classification_report.json
+
+# ─────────────────────────────────────────────
+#  PYTHON
+# ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+
+# ─────────────────────────────────────────────
+#  ENVIRONNEMENTS VIRTUELS
+# ─────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ─────────────────────────────────────────────
+#  JUPYTER
+# ─────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─────────────────────────────────────────────
+#  VARIABLES D'ENVIRONNEMENT & SECRETS
+# ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+secrets.json
+config.local.*
+
+# ─────────────────────────────────────────────
+#  WINDOWS
+# ─────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# ─────────────────────────────────────────────
+#  ÉDITEURS
+# ─────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+
+# ─────────────────────────────────────────────
+#  LOGS & TEMPORAIRES
+# ─────────────────────────────────────────────
+logs/
+*.log
+*.tmp
+*.temp
+runs/
+tensorboard_logs/
+lightning_logs/
