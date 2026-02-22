@@ -1,11 +1,11 @@
-# 🖼️ image-classifier (PyTorch)
+# image-classifier (PyTorch)
 
 Image classification module using **Transfer Learning with MobileNetV2** (PyTorch / torchvision).  
 Drop your dataset in, run one command, get a trained `.pth` model — that's it.
 
 ---
 
-## 📁 Project Structure
+# Project Structure
 
 ```
 image-classifier/
@@ -28,11 +28,11 @@ image-classifier/
 └── README.md
 ```
 
-> ⚠️ The `dataset/` folder is excluded from Git. Each contributor brings their own data locally.
+>  The `dataset/` folder is excluded from Git. Each contributor brings their own data locally.
 
 ---
 
-## ⚙️ Requirements
+#  Requirements
 
 - Python **3.9+**
 - pip or a virtual environment manager (venv, conda)
@@ -40,7 +40,7 @@ image-classifier/
 
 ---
 
-## 🚀 Quick Start
+#  Quick Start
 
 **1. Clone the repository**
 ```bash
@@ -59,7 +59,7 @@ venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 ```
 
-> 🔥 For GPU (CUDA 11.8) support, replace the torch line in requirements.txt with:
+>  For GPU (CUDA 11.8) support, replace the torch line in requirements.txt with:
 > ```
 > --index-url https://download.pytorch.org/whl/cu118
 > torch>=2.0.0
@@ -90,7 +90,7 @@ make train
 
 ---
 
-## 📤 Outputs
+#  Outputs
 
 After training, the following files are generated inside `dataset/`:
 
@@ -105,7 +105,7 @@ After training, the following files are generated inside `dataset/`:
 
 ---
 
-## 🧠 Model Architecture
+#  Model Architecture
 
 | Parameter | Value |
 |-----------|-------|
@@ -122,7 +122,7 @@ After training, the following files are generated inside `dataset/`:
 
 ---
 
-## 🛑 Callbacks / Training Features
+##  Callbacks / Training Features
 
 - **Early Stopping** — stops if `val_loss` doesn't improve for 7 epochs, restores best weights
 - **ModelCheckpoint** — saves the best `.pth` per phase
@@ -130,7 +130,7 @@ After training, the following files are generated inside `dataset/`:
 
 ---
 
-## 🔁 Loading the Model for Inference
+#  Loading the Model for Inference
 
 ```python
 import torch
@@ -155,7 +155,7 @@ model.eval()
 
 ---
 
-## 🛠️ Makefile Commands
+#  Makefile Commands
 
 ```bash
 make install     # Install dependencies
@@ -169,7 +169,7 @@ make help        # List all commands
 
 ---
 
-## 📦 Configuration
+#  Configuration
 
 Key parameters can be adjusted at the top of `train_classifier.py`:
 
